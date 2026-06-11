@@ -105,6 +105,37 @@ La aplicación permanece activa mientras monitorea y registra eventos producidos
 
 ---
 
+📋 Requisitos Previos
+
+Antes de ejecutar el proyecto, asegúrate de contar con:
+
+Python 3.8 o superior.
+Conexión a Internet para el envío de correos.
+Cuenta de correo configurada para el envío de reportes.
+Permisos necesarios para la captura de eventos del teclado según el sistema operativo.
+📦 Dependencias
+
+El proyecto utiliza las siguientes librerías:
+
+keyboard
+yagmail
+
+Instalación rápida:
+
+pip install keyboard yagmail
+
+
+🔐 Variables de Entorno
+
+Para una mayor seguridad, se recomienda almacenar las credenciales en un archivo .env.
+
+| Variable | Descripción |
+|-----------|-------------|
+| `EMAIL_USER` | Correo electrónico utilizado para enviar los reportes generados por la aplicación. |
+| `EMAIL_PASSWORD` | Contraseña o contraseña de aplicación asociada al correo electrónico configurado. |
+| `EMAIL_DESTINATION` | Correo destinatario que recibirá los registros y reportes enviados por el sistema. |
+
+
 ## Instalación
 
 ### 1. Clonar el repositorio
