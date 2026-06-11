@@ -1,29 +1,29 @@
-#  Keyboard Event Logger
+# Keyboard Event Logger
 
-Aplicación desarrollada en Python para la captura y procesamiento de eventos de teclado, permitiendo registrar información en archivos locales y automatizar el envío de reportes mediante correo electrónico.
+Aplicación desarrollada en Python para registrar eventos del teclado, almacenar información en archivos de texto y automatizar el envío de reportes mediante correo electrónico.
 
 ---
 
 ##  Descripción
 
-Keyboard Event Logger es una aplicación desarrollada en Python orientada al estudio y comprensión de la captura de eventos generados por el teclado, el procesamiento de información en tiempo real y la automatización de tareas. El proyecto implementa mecanismos para detectar pulsaciones de teclas, registrar la información obtenida y almacenarla en archivos locales para su posterior análisis.
+Keyboard Event Logger es un proyecto desarrollado en Python que permite capturar y registrar las pulsaciones realizadas en el teclado. La información recopilada se almacena en un archivo de texto y puede ser enviada automáticamente por correo electrónico mediante una configuración previa.
 
-Además, integra servicios de correo electrónico para automatizar el envío de reportes, permitiendo explorar conceptos relacionados con la comunicación entre aplicaciones, protocolos de correo, manejo de archivos y programación orientada a eventos. Su desarrollo contribuye al fortalecimiento de habilidades en automatización, monitoreo de eventos, manejo de librerías externas y administración de información mediante Python.
+El propósito de este proyecto fue poner en práctica conceptos relacionados con el manejo de eventos, la automatización de tareas, el trabajo con archivos y la integración de servicios externos en Python. Durante su desarrollo se utilizaron librerías especializadas para detectar eventos del teclado y gestionar el envío de información a través de correo electrónico.
 
-Este proyecto fue concebido como una práctica académica para comprender el funcionamiento de aplicaciones que reaccionan a eventos del sistema, así como los principios básicos de registro de actividad y transmisión automatizada de datos en entornos controlados.
+Este proyecto permitió fortalecer conocimientos sobre programación en Python, manejo de librerías externas y automatización de procesos, aplicando conceptos vistos durante la formación académica.
 
 ---
 
 ##  Características
 
-- Captura eventos de teclado en tiempo real.
-- Registro automático de pulsaciones.
-- Almacenamiento de información en archivos locales.
-- Procesamiento continuo de eventos.
-- Automatización de reportes mediante correo electrónico.
-- Uso de librerías externas para monitoreo y comunicación.
-- Gestión básica de registros y seguimiento de actividad.
-- Implementación de programación orientada a eventos.
+- Captura de eventos del teclado en tiempo real.
+- Registro automático de pulsaciones en archivos de texto.
+- Almacenamiento local de información.
+- Automatización del envío de reportes mediante correo electrónico.
+- Integración con servicios SMTP.
+- Uso de librerías externas para el monitoreo de eventos.
+- Procesamiento continuo de información durante la ejecución.
+- Implementación de conceptos de automatización y programación orientada a eventos.
 
 ---
 
@@ -39,29 +39,25 @@ Este proyecto fue concebido como una práctica académica para comprender el fun
 
 ##  Arquitectura General
 
-La aplicación sigue una arquitectura simple basada en eventos, donde las acciones realizadas por el usuario son capturadas, procesadas y almacenadas para posteriormente generar reportes automatizados.
+La aplicación se basa en la captura de eventos generados por el teclado, el procesamiento de la información obtenida y el almacenamiento de los registros para su posterior envío mediante correo electrónico.
 
 ```text
 Usuario
    │
    ▼
-Eventos de Teclado
+Eventos del Teclado
    │
    ▼
-Procesamiento de Eventos
+Procesamiento de Datos
    │
-   ├── Registro Local
-   │      │
-   │      └── Archivo TXT
+   ├── Archivo TXT
    │
-   └── Envío de Reportes
-           │
-           └── Correo Electrónico
+   └── Correo Electrónico
 ```
 
 ---
 
-##  Estructura del Proyecto
+## Estructura del Proyecto
 
 ```text
 keylog-main/
@@ -77,34 +73,34 @@ keylog-main/
 
 ### Captura de Eventos
 
-Permite detectar las pulsaciones realizadas en el teclado mediante eventos generados por el sistema operativo, registrando la información en tiempo real.
+Permite detectar las teclas presionadas por el usuario durante la ejecución del programa y registrar la información generada.
 
-### Procesamiento de Información
+### Registro de Información
 
-Los eventos capturados son procesados para identificar y organizar los datos obtenidos durante la ejecución de la aplicación.
+Los eventos capturados son almacenados en archivos de texto para mantener un historial de la actividad registrada.
 
-### Registro de Actividad
+### Automatización de Procesos
 
-La información recopilada se almacena en archivos de texto locales, permitiendo conservar un historial de los eventos registrados.
+El sistema automatiza tareas relacionadas con el almacenamiento y envío de la información recopilada.
 
-### Automatización de Reportes
+### Envío de Reportes
 
-El sistema integra servicios de correo electrónico para enviar automáticamente la información recopilada, facilitando la automatización de tareas y el manejo de reportes.
+Integra servicios de correo electrónico para compartir los registros generados de forma automática.
 
-### Ejecución Continua
+### Procesamiento Continuo
 
-La aplicación permanece en funcionamiento mientras monitorea los eventos del teclado, procesando cada interacción detectada durante la ejecución.
+La aplicación permanece activa mientras monitorea y registra eventos producidos por el teclado.
 
 ---
 
-##  Flujo de Funcionamiento
+## Flujo de Funcionamiento
 
 1. Inicio de la aplicación.
-2. Activación del monitoreo de teclado.
-3. Captura de eventos generados por el usuario.
-4. Procesamiento de la información obtenida.
-5. Registro de datos en archivos locales.
-6. Generación y envío de reportes automáticos.
+2. Activación del monitoreo de eventos del teclado.
+3. Captura de pulsaciones.
+4. Registro de información en archivos de texto.
+5. Procesamiento de los datos recopilados.
+6. Envío automático de reportes por correo electrónico.
 7. Finalización de la ejecución.
 
 ---
@@ -131,13 +127,13 @@ python -m venv venv
 
 ### 4. Activar el entorno virtual
 
-Windows:
+**Windows**
 
 ```bash
 venv\Scripts\activate
 ```
 
-Linux / Mac:
+**Linux / Mac**
 
 ```bash
 source venv/bin/activate
@@ -157,29 +153,30 @@ python tp.py
 
 ---
 
-## Objetivo del Proyecto
+##  Objetivo del Proyecto
 
-Desarrollar una aplicación que permita comprender el funcionamiento de la captura de eventos del sistema, el almacenamiento de información y la automatización de procesos mediante servicios de comunicación en Python.
+Desarrollar una aplicación que permita comprender el funcionamiento de los eventos del teclado en Python, así como el almacenamiento de información y la automatización de tareas mediante el uso de archivos y servicios de correo electrónico.
 
 ---
 
-##  Conceptos Aplicados
+## Conceptos Aplicados
 
-Durante el desarrollo de este proyecto se aplicaron conceptos relacionados con:
+Durante el desarrollo de este proyecto se trabajó con conceptos como:
 
 - Programación orientada a eventos.
-- Manejo de librerías externas.
 - Automatización de tareas.
-- Gestión de archivos.
-- Comunicación mediante protocolos SMTP.
+- Manejo de archivos.
+- Uso de librerías externas.
+- Comunicación mediante correo electrónico.
+- Integración de servicios SMTP.
 - Procesamiento de información en tiempo real.
-- Manejo de estructuras de control y ciclos de ejecución.
-- Integración de servicios externos en aplicaciones Python.
+- Desarrollo de aplicaciones en Python.
 
 ---
 
-##  Equipo de Desarrollo
 
-Proyecto desarrollado con fines académicos para fortalecer competencias en programación, automatización de procesos y manejo de eventos utilizando Python.
+##  Licencia
 
----
+Proyecto académico y educativo.
+
+> ⚠️ Este proyecto fue desarrollado con fines de aprendizaje y demostración de conceptos relacionados con la captura de eventos, automatización y manejo de información en Python.
